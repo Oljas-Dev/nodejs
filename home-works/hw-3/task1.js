@@ -10,6 +10,13 @@ fs.mkdir(dirName, (err) => {
   }
 
   console.log("Directory was created!");
-});
 
-fs.rmdir();
+  fs.rmdir(dirName, (err) => {
+    if (err) {
+      console.error("Error removing new directiory: ", err);
+      return;
+    }
+  });
+
+  console.log("Directory was succefully removed!");
+});
