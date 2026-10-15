@@ -35,6 +35,7 @@ app.post("/users", (req, res) => {
     res.status(201).send("User added successfully");
   });
 });
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
