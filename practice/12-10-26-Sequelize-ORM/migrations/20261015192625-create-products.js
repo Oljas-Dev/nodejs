@@ -22,9 +22,16 @@ export async function up(queryInterface, Sequelize) {
       type: Sequelize.STRING,
       allowNull: true,
     },
+    categoryName: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      references: {
+        model: "Categories",
+        key: "name",
+      },
+    },
   });
 }
-
 export async function down(queryInterface, Sequelize) {
   await queryInterface.dropTable("Products");
 }

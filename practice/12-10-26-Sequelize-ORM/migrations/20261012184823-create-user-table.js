@@ -28,3 +28,5 @@ export async function up(queryInterface, Sequelize) {
 export async function down(queryInterface, Sequelize) {
   await queryInterface.dropTable("Users");
 }
+
+//  npx sequelize-cli migration:generate --name create-post-table
