@@ -1,9 +1,10 @@
 import express from "express";
-import { configDotenv } from "dotenv";
-
-configDotenv();
+import "dotenv/config";
 
 const app = express();
+
+app.use(express.json());
+
 const host = process.env.HOST;
 const port = process.env.PORT;
 
